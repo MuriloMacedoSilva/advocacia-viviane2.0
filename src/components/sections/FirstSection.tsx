@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function FirstSection() {
     return (
-        <section className="relative w-full h-[150%] 2xl:h-screen flex flex-col items-center justify-center pb-18">
+        <section className="relative w-full h-screen flex flex-col items-center justify-center pb-18">
             <Image 
                 src="/background1.svg"
                 alt="background" 
@@ -14,13 +14,13 @@ export default function FirstSection() {
                 <div className="border border-brand p-1.5 rounded-full font-semibold max-w-125 lg:mb-6.5">
                     <p className="text-brand font-Montserrat md:text-[12px] text-[7px] text-center">BLINDAGEM JURÍDICA E COMPLIENCE ESTRATÉGICO</p>
                 </div>
-                <h1 className="text-white font-Montserrat font-bold text-[36px] md:text-[64px] md:text-center md:leading-18">
+                <h1 className="text-white font-Montserrat font-bold text-[46px] leading-12 md:text-[64px] md:text-center md:leading-18">
                     A invisibilidade do risco é o maior passivo do seu negócio.
                 </h1>
-                <p className="text-white font-poppins font-normal text-[11px] md:text-[18px] md:text-center w-[80%]">Transformamos contingências legais e atritos de consumo em ativos de fidelização. Unimos o rigor do Compliance à inteligência de negócios para proteger sua margem e consolidar sua reputação global.</p>
+                <p className="text-white font-poppins font-normal text-[13px] md:text-[18px] md:text-center w-[80%]">Transformamos contingências legais e atritos de consumo em ativos de fidelização. Unimos o rigor do Compliance à inteligência de negócios para proteger sua margem e consolidar sua reputação global.</p>
                 <div className="md:w-[80%] w-full flex items-center justify-start gap-3  md:justify-center">
-                    <a href="" className="bg-brand border border-brand flex items-center justify-center p-3 text-gray-900 w-[45%] transition-colors duration-300 hover:bg-orange-200 shadow-sm shadow-amber-200/70 text-[7px] md:text-[14px] h-12">Solicitar Diagnóstico de Vulnerabilidade</a>
-                    <a href="" className="bg-white/10 backdrop-blur-md border border-brand flex items-center justify-center p-3 text-white w-[45%] transition-colors duration-300 hover:bg-orange-200 shadow-sm shadow-amber-200/70 hover:text-gray-900 text-[7px] md:text-[14px] h-12">Nos acompanhe nas redes</a>
+                    <a href="" className="bg-brand border border-brand flex items-center justify-center p-3 text-gray-900 w-[45%] transition-colors duration-300 hover:bg-orange-200 shadow-sm shadow-amber-200/70 text-[12px] md:text-[14px] h-12">Solicitar Diagnóstico de Vulnerabilidade</a>
+                    <a href="" className="bg-white/10 backdrop-blur-md border border-brand flex items-center justify-center p-3 text-white w-[45%] transition-colors duration-300 hover:bg-orange-200 shadow-sm shadow-amber-200/70 hover:text-gray-900 text-[12px] md:text-[14px] h-12">Nos acompanhe nas redes</a>
                 </div>
             </div>
 

@@ -4,7 +4,7 @@
 
 export default function SecondSection() {
     return (
-        <section className="w-full flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-8 py-14 bg-linear-to-b from-white to-gray-100 ">
+        <section className="w-full flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-10 py-20 bg-linear-to-b from-white to-gray-100 ">
             <h2 className="text-center font-Montserrat font-semibold text-black text-[24px] md:text-[36px] px-1">
                 Expertise chanccelada por grandes players globais.
             </h2>
