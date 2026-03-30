@@ -1,17 +1,17 @@
-import Image from "next/image";
+"use client";
 
 export default function FirstSection() {
   return (
     <section className="relative w-full 2xl:h-[80vh] flex flex-col items-center justify-start">
       <video
-      poster="/background.webm"
+      poster="/background1.svg"
       autoPlay 
       loop 
       muted 
+      onCanPlay={(e) => (e.currentTarget.muted = true)}
       playsInline
       className="absolute -z-2 min-w-full min-h-full object-cover">
         <source src="/background.webm" type="video/webm" />
-        
       </video>
 
       <div className="absolute inset-0 -z-1 bg-black/40"></div>
