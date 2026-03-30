@@ -1,6 +1,6 @@
 export default function SecondSection() {
   return (
-    <section className="w-full flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 py-30 bg-linear-to-b from-white to-gray-100 ">
+    <section className="w-full flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 py-40 bg-linear-to-b from-white to-gray-100 ">
       <h2 className="text-center font-Montserrat font-semibold text-black text-[36px] px-1 leading-9">
         Expertise chancelada por grandes players globais.
       </h2>
