@@ -1,5 +1,5 @@
 import FirstSection from "@/components/sections/FirstSection";
-import SecondSection from "@/components/sections/SecondSection";
+
 import ThirdSection from "@/components/sections/ThirdSection";
 
 import PageLoader from "@/components/PageLoader";
@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import WhatsApp from "@/components/WhatsApp";
 import FourthSection from "@/components/sections/FourthSection";
+import SecondSection from "@/components/sections/SecondSection";
 
 export const metadata: Metadata = {
   title: "Viviane Luiz Macedo | Compliance e Advocacia Empresarial",

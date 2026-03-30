@@ -3,12 +3,18 @@ import Image from "next/image";
 export default function FirstSection() {
   return (
     <section className="relative w-full 2xl:h-[80vh] flex flex-col items-center justify-start">
-      <Image
-        src="/background1.svg"
-        alt="background"
-        fill
-        className="object-cover -z-10 rounded-b-4xl"
-      />
+      <video
+      poster="/background.webm"
+      autoPlay 
+      loop 
+      muted 
+      playsInline
+      className="absolute -z-2 min-w-full min-h-full object-cover">
+        <source src="/background.webm" type="video/webm" />
+        <source src="/seu_video.mp4" type="video/mp4" />
+      </video>
+
+      <div className="absolute inset-0 -z-1 bg-black/40"></div>
 
       <div className="flex flex-col items-start xl:items-center justify-center w-[90%] xl:w-[71%] gap-16 xl:gap-10 2xl:gap-15 md:gap-12 mt-38 lg:mt-26 mb-50">
         <div className="border border-brand p-1.5 rounded-full font-semibold max-w-125 xl:mb-6.5">

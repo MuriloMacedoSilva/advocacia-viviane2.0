@@ -3,12 +3,7 @@ import Image from "next/image";
 export default function SecondSection() {
   return (
     <section className="w-full relative flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 lg:gap-20 py-40 bg-linear-to-b from-white to-gray-100 ">
-
-      <Image
-      src="/solarEnergy.svg"
-      alt=""
-      fill
-      className="object-cover" />
+      <Image src="/energySolar.svg" alt="" fill className="object-cover" />
 
       <h2 className="text-center relative font-Montserrat font-semibold text-black text-[36px] px-1 leading-9">
         Expertise chancelada por grandes players globais.
