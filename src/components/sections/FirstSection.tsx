@@ -16,7 +16,7 @@ export default function FirstSection() {
             BLINDAGEM JURÍDICA E COMPLIENCE ESTRATÉGICO
           </p>
         </div>
-        <h1 className="text-white font-Montserrat font-bold text-[55px] leading-12 xl:text-[64px] xl:text-center xl:leading-18">
+        <h1 className="text-white font-Montserrat font-bold text-[47px] leading-12 xl:text-[64px] xl:text-center xl:leading-18">
           A invisibilidade do risco é o maior passivo do seu negócio.
         </h1>
         <p className="text-white font-poppins font-normal text-[16px] xl:text-[18px] xl:text-center w-[80%]">

@@ -8,7 +8,6 @@ import { Metadata } from "next";
 import Header from "@/components/Header";
 import WhatsApp from "@/components/WhatsApp";
 import FourthSection from "@/components/sections/FourthSection";
-import FifthSection from "@/components/sections/FifthSection";
 
 export const metadata: Metadata = {
   title: "Viviane Luiz Macedo | Compliance e Advocacia Empresarial",
@@ -70,7 +69,6 @@ export default function Home() {
         <SecondSection />
         <ThirdSection />
         <FourthSection />
-        <FifthSection />
       </main>
       <WhatsApp />
     </PageLoader>
