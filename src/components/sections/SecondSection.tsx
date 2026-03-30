@@ -1,7 +1,7 @@
 export default function SecondSection() {
   return (
     <section className="w-full flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 py-30 bg-linear-to-b from-white to-gray-100 ">
-      <h2 className="text-center font-Montserrat font-semibold text-black text-[32px] md:text-[36px] px-1 leading-9">
+      <h2 className="text-center font-Montserrat font-semibold text-black text-[36px] px-1 leading-9">
         Expertise chancelada por grandes players globais.
       </h2>
 
@@ -16,7 +16,7 @@ export default function SecondSection() {
       </p>
 
       <div className="flex flex-col items-center gap-3">
-        <h2 className=" text-center text-brand2 font-medium font-Montserrat text-[29px] md:text-[36px]">
+        <h2 className=" text-center text-brand2 font-medium font-Montserrat text-[36px]">
           "O que você não vê está corroendo seu lucro."
         </h2>
         <div className="flex items-center gap-3 w-[40%]">
