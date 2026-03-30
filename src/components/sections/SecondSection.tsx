@@ -11,7 +11,7 @@ export default function SecondSection() {
 
             <h3 className="font-poppins font-semibold text-black w-[85%] md:w-full text-[14px] md:text-[23px] justify-center  border-x-4 border-brand2 px-13 md:h-20 flex items-center text-center">Grande player na área de energia solar global</h3>
 
-            <p className="text-center font-poppins font-normal text-gray-900 text-[15px] md:text-[16px]">Responsáveis pela engenharia jurídica e gestão de complience de operações transcontinentais, convertendo  crises de copnsumo em índices de retenção superiores à média do mercado.</p>
+            <p className="text-center font-poppins font-normal text-gray-900 text-[16px]">Responsáveis pela engenharia jurídica e gestão de complience de operações transcontinentais, convertendo  crises de copnsumo em índices de retenção superiores à média do mercado.</p>
 
             <div className="flex flex-col items-center gap-3">
                 <h2 className=" text-center text-brand2 font-medium font-Montserrat text-[29px] md:text-[36px]">
