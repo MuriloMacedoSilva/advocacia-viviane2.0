@@ -45,7 +45,7 @@ export default function ThirdSection() {
     return (
         <section>
             {sections.map((Section) => (
-                <section key={Section.id} className="border-t w-full border-gray-300 flex flex-col-reverse lg:flex-row items-center px-[9%] py-5">
+                <section key={Section.id} className="border-t w-full border-gray-300 flex flex-col-reverse lg:flex-row items-center px-[6%] lg:px-30 py-10 md:py-5">
                     <div className="flex flex-col gap-4 items-start">
                         <p className="mb-20 font-poppins text=[16px] text-black font-light">{Section.topic}</p>
                         <p className="font-poppins text-brand2 text-[20px] font-normal">{Section.tag}</p>

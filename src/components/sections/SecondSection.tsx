@@ -4,9 +4,9 @@
 
 export default function SecondSection() {
     return (
-        <section className="w-full flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-10 py-20 bg-linear-to-b from-white to-gray-100 ">
-            <h2 className="text-center font-Montserrat font-semibold text-black text-[24px] md:text-[36px] px-1">
-                Expertise chanccelada por grandes players globais.
+        <section className="w-full flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-20 py-20 bg-linear-to-b from-white to-gray-100 ">
+            <h2 className="text-center font-Montserrat font-semibold text-black text-[28px] md:text-[36px] px-1 leading-9">
+                Expertise chancelada por grandes players globais.
             </h2>
 
             <h3 className="font-poppins font-semibold text-black w-[85%] md:w-full text-[11px] md:text-[23px] justify-center  border-x-4 border-brand2 px-13 md:h-20 flex items-center text-center">Grande player na área de energia solar global</h3>
