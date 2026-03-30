@@ -1,34 +1,81 @@
+"use client";
+
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 
 export default function SecondSection() {
+  
+  // Mesma lógica de variantes da primeira seção
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Cada item aparece com 0.2s de intervalo
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 }, // Começa um pouco mais baixo (30px)
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.8, ease: "easeOut" } 
+    },
+  };
+
   return (
-    <section className="w-full relative flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 lg:gap-20 py-40 bg-linear-to-b from-white to-gray-100 ">
-      <Image src="/energySolar.svg" alt="" fill className="object-cover" />
+    <section className="w-full relative flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 lg:gap-20 py-40 bg-linear-to-b from-white to-gray-100 overflow-hidden">
+      {/* Imagem de Fundo (Pode ser estática como você preferiu) */}
+      <Image src="/energySolar.svg" alt="fundo" fill className="object-cover z-0" />
 
-      <h2 className="text-center relative font-Montserrat font-semibold text-black text-[36px] px-1 leading-9">
-        Expertise chancelada por grandes players globais.
-      </h2>
+      {/* Container Animado que ativa ao entrar na tela */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible" // <-- A MÁGICA ESTÁ AQUI
+        viewport={{ once: true, amount: 0.3 }} // Anima apenas uma vez quando 30% da seção aparecer
+        className="flex flex-col items-center justify-center gap-35"
+      >
+        <motion.h2 
+          variants={itemVariants}
+          className="text-center relative font-Montserrat font-semibold text-black text-[36px] px-1 leading-9"
+        >
+          Expertise chancelada por grandes players globais.
+        </motion.h2>
 
-      <h3 className="font-poppins relative font-semibold text-black w-[85%] md:w-full text-[14px] md:text-[23px] justify-center  border-x-4 border-brand2 px-13 md:h-20 flex items-center text-center">
-        Grande player na área de energia solar global
-      </h3>
+        <motion.h3 
+          variants={itemVariants}
+          className="font-poppins relative font-semibold text-black w-[85%] md:w-full text-[14px] md:text-[23px] justify-center border-x-4 border-brand2 px-13 md:h-20 flex items-center text-center"
+        >
+          Grande player na área de energia solar global
+        </motion.h3>
 
-      <p className="text-center relative font-poppins font-normal text-black text-[16px]">
-        Responsáveis pela engenharia jurídica e gestão de complience de
-        operações transcontinentais, convertendo crises de copnsumo em índices
-        de retenção superiores à média do mercado.
-      </p>
+        <motion.p 
+          variants={itemVariants}
+          className="text-center relative font-poppins font-normal text-black text-[16px]"
+        >
+          Responsáveis pela engenharia jurídica e gestão de compliance de
+          operações transcontinentais, convertendo crises de consumo em índices
+          de retenção superiores à média do mercado.
+        </motion.p>
 
-      <div className="flex flex-col relative items-center gap-3">
-        <h2 className=" text-center text-brand font-medium font-Montserrat text-[36px]">
-          "O que você não vê está corroendo seu lucro."
-        </h2>
-        <div className="flex items-center gap-3 w-[40%]">
-          <div className="border border-brand2 w-[60%]"></div>
-          <div className="border border-brand2 w-[10%]"></div>
-          <div className="border border-brand2 w-[20%]"></div>
-        </div>
-      </div>
+        <motion.div 
+          variants={itemVariants}
+          className="flex flex-col relative items-center gap-3"
+        >
+          <h2 className="text-center text-brand font-medium font-Montserrat text-[36px]">
+            "O que você não vê está corroendo seu lucro."
+          </h2>
+          <div className="flex items-center gap-3 w-[80%] md:w-[40%]">
+            <div className="border border-brand2 w-[60%]"></div>
+            <div className="border border-brand2 w-[10%]"></div>
+            <div className="border border-brand2 w-[30%]"></div>
+          </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
