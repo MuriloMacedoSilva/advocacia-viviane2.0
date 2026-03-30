@@ -1,9 +1,24 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+
 export default function FirstSection() {
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.play().catch((error) => {
+        console.error("Autoplay bloqueado pelo Opera:", error);
+      });
+    }
+  }, []);
+
   return (
     <section className="relative w-full 2xl:h-[80vh] flex flex-col items-center justify-start">
       <video
+      ref={videoRef}
       poster="/background1.svg"
       autoPlay 
       loop 
@@ -12,6 +27,7 @@ export default function FirstSection() {
       playsInline
       className="absolute -z-2 min-w-full min-h-full object-cover">
         <source src="/background.webm" type="video/webm" />
+        <source src="/seu_video.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 -z-1 bg-black/40"></div>
