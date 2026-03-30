@@ -25,7 +25,7 @@ const sections:Section[] = [
         id: 2,
         topic: "02. Vazamento de Receita",
         tag: "Custo",
-        title: "O CAC é desperdiçado quando o complience falaha.",
+        title: "O CAC é desperdiçado quando o complience falha.",
         text: "Cada cliente adquirido representa investimento. Quando o alinhamento legal falha, esse investimento vira perda irreversível.",
         button: "Mitigar",
         image: "/tower.svg"
@@ -47,7 +47,7 @@ export default function ThirdSection() {
             {sections.map((Section) => (
                 <section key={Section.id} className="border-t w-full border-gray-300 flex flex-col-reverse lg:flex-row items-center px-[6%] lg:px-30 py-10 md:py-5">
                     <div className="flex flex-col gap-4 items-start">
-                        <p className="mb-20 font-poppins text=[16px] text-black font-light">{Section.topic}</p>
+                        <p className="mb-20 font-poppins text-[14px] text-black font-light">{Section.topic}</p>
                         <p className="font-poppins text-brand2 text-[20px] font-normal">{Section.tag}</p>
                         <h2 className="font-Montserrat font-medium text-[38px] md:text-[48px] md:leading-15">{Section.title}</h2>
                         <p className="font-poppins font-normal text-[16px] text-gray-700 mt-4">{Section.text}</p>
