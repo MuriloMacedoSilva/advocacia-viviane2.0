@@ -10,7 +10,7 @@ export default function FirstSection() {
         className="object-cover -z-10 rounded-b-4xl"
       />
 
-      <div className="flex flex-col items-start xl:items-center justify-center w-[90%] xl:w-[71%] gap-12 xl:gap-10 2xl:gap-15 md:gap-12 mt-33 lg:mt-26 mb-50">
+      <div className="flex flex-col items-start xl:items-center justify-center w-[90%] xl:w-[71%] gap-16 xl:gap-10 2xl:gap-15 md:gap-12 mt-38 lg:mt-26 mb-50">
         <div className="border border-brand p-1.5 rounded-full font-semibold max-w-125 xl:mb-6.5">
           <p className="text-brand font-Montserrat xl:text-[12px] text-[11px] text-center">
             BLINDAGEM JURÍDICA E COMPLIENCE ESTRATÉGICO
