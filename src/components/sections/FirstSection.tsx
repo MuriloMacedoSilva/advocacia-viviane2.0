@@ -73,7 +73,8 @@ export default function FirstSection() {
         {/* Botões */}
         <motion.div variants={itemVariants} className="xl:w-[80%] w-full flex flex-col md:flex-row items-center justify-center gap-4">
           <a
-            href="#"
+            href="https://api.whatsapp.com/send/?phone=%2B5511996669191&text&type=phone_number&app_absent=0"
+            target="blank"
             className="bg-brand border border-brand flex items-center justify-center p-3 text-gray-900 w-[90%] md:w-[50%] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-brand/20 text-[14px] xl:text-[16px] font-bold h-14"
           >
             Solicitar Diagnóstico de Vulnerabilidade

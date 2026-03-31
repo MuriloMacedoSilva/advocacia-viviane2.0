@@ -67,7 +67,7 @@ export default function FinalCTA() {
           <div className="absolute -inset-1 bg-brand blur-md opacity-20 group-hover:opacity-50 transition duration-500"></div>
           
           <a
-            href="#"
+            href="https://api.whatsapp.com/send/?phone=%2B5511996669191&text&type=phone_number&app_absent=0" target="blank"
             className="relative bg-brand px-10 py-5 text-gray-950 font-Montserrat font-bold text-[14px] md:text-[16px] uppercase tracking-widest transition-all duration-300 hover:bg-orange-200 hover:scale-105 inline-block"
           >
             Agendar reunião estratégica

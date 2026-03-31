@@ -100,7 +100,7 @@ export default function FifthSection() {
                 <p className="font-poppins text-[15px] text-gray-600 font-normal leading-relaxed">
                   {card.text}
                 </p>
-                <a href="#" className="font-Montserrat font-bold text-[13px] text-brand mt-4 flex items-center gap-2 hover:gap-4 transition-all">
+                <a href="https://api.whatsapp.com/send/?phone=%2B5511996669191&text&type=phone_number&app_absent=0" target="blank" className="font-Montserrat font-bold text-[13px] text-brand mt-4 flex items-center gap-2 hover:gap-4 transition-all">
                   {card.button.toUpperCase()} <span>→</span>
                 </a>
               </div>

@@ -19,7 +19,8 @@ export default function Header() {
       />
 
       <a
-        href=""
+        href="https://api.whatsapp.com/send/?phone=%2B5511996669191&text&type=phone_number&app_absent=0"
+        target="blank"
         className="bg-brand hidden w-42 h-[52%] rounded-full md:flex items-center justify-center transition-colors duration-300 hover:bg-orange-200 shadow-sm shadow-amber-200/70"
       >
         <p className="text-gray-800 text-[14px] font-poppins">

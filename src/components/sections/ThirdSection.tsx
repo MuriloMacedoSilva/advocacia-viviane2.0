@@ -90,7 +90,7 @@ function AnimatedCard({ section }: { section: SectionData }) {
         </motion.p>
         <motion.a
           variants={itemVariants}
-          href="#"
+          href="https://api.whatsapp.com/send/?phone=%2B5511996669191&text&type=phone_number&app_absent=0" target="blank"
           className="text-white bg-blues w-[90%] md:w-[55%] flex items-center justify-center p-3 cursor-pointer border border-blues mt-10 font-poppins text-[16px] font-normal hover:bg-gray-600 duration-200 transition-all hover:scale-[1.03]"
         >
           {section.button}
