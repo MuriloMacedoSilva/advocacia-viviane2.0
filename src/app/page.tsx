@@ -9,6 +9,10 @@ import Header from "@/components/Header";
 import WhatsApp from "@/components/WhatsApp";
 import FourthSection from "@/components/sections/FourthSection";
 import SecondSection from "@/components/sections/SecondSection";
+import ProtocolSection from "@/components/sections/ProtocolSection";
+import FinalCTA from "@/components/sections/FinalCTA";
+import CEOSection from "@/components/sections/CEOSection";
+import Footer from "@/components/sections/Footer";
 
 export const metadata: Metadata = {
   title: "Viviane Luiz Macedo | Compliance e Advocacia Empresarial",
@@ -70,8 +74,12 @@ export default function Home() {
         <SecondSection />
         <ThirdSection />
         <FourthSection />
+        <ProtocolSection />
+        <FinalCTA />
+        <CEOSection />
       </main>
       <WhatsApp />
+      <Footer />
     </PageLoader>
   );
 }

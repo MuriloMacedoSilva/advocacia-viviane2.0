@@ -9,7 +9,7 @@ const poppins = Poppins({
 
 export default function Header() {
   return (
-    <header className="w-full md:h-22 absolute top-0 left-0 flex items-center justify-between xl:px-20 px-5 z-10">
+    <header className="w-full md:h-22 absolute top-0 left-0 flex items-center justify-between xl:px-18 px-5 z-10">
       <Image
         src="/LogoHeader.svg"
         width={300}

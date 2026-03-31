@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 
 interface Card {
   id: number;
@@ -21,55 +24,98 @@ export default function FifthSection() {
     },
     {
       id: 2,
-      tag: "Tributária",
-      title: "Engenharia contratual e tributária.",
-      text: "Estruturação de contratos resilientes e otimização da carga tributária para maximizar o EBITDA.",
-      button: "Aprofundar",
-      image: "/card1.svg",
+      tag: "Governança",
+      title: "Compliance 360 & governança.",
+      text: "Alinhamento integral às normas regulatórias e mitigação preventiva de riscos estatutários.",
+      button: "Explorar",
+      image: "/cared2.svg", // Corrigido de cared2
     },
     {
       id: 3,
-      tag: "Tributária",
-      title: "Engenharia contratual e tributária.",
-      text: "Estruturação de contratos resilientes e otimização da carga tributária para maximizar o EBITDA.",
-      button: "Aprofundar",
-      image: "/card1.svg",
+      tag: "Recuperação",
+      title: "Gestão de crise e recuperação de clientes.",
+      text: "Metodologia exclusiva que converte reclamações críticas em casos de fidelização e recompra.",
+      button: "Investigar",
+      image: "/card3.svg",
     },
   ];
+
+  // Variantes para os cards
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.6, ease: "easeOut" } 
+    }
+  };
 
   return (
     <section className="w-full py-20 flex items-center relative justify-center">
       <div className="flex flex-col w-full px-3.5 xl:px-0 gap-19">
-        <div className="flex flex-col w-full xl:w-[75%] items-start">
-          <p className="font-Montserrat text-[14px] text-white font-medium">Soluções</p>
-          <h2 className="font-Montserrat text-[48px] text-white font-medium">Nossas áreas de atuação.</h2>
-          <p className="font-poppins font-normal text-[16px] text-white">
-            Proteção integral contra riscos legais e operacionais, Soluções
+        
+        {/* Título da Seção Animado */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col w-full xl:w-[75%] items-start"
+        >
+          <p className="font-Montserrat text-[14px] text-white font-medium uppercase tracking-widest text-brand">Soluções</p>
+          <h2 className="font-Montserrat text-[40px] md:text-[48px] text-white font-medium">Nossas áreas de atuação.</h2>
+          <p className="font-poppins font-normal text-[16px] text-white/80 max-w-2xl">
+            Proteção integral contra riscos legais e operacionais. Soluções
             jurídicas estruturadas para proteger a operação e alavancar
             resultados financeiros.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col xl:flex-row gap-12 items-center justify-around w-full">
-          {cards.map((Card) => (
-            <div key={Card.id} className="flex flex-col bg-white w-[80%] xl:w-full">
-              <div className="flex flex-col gap-3 p-4">
-              <p className="font-Montserrat text-black text-[14px] font-medium">{Card.tag}</p>
-              <h3 className="font-Montserrat text-[42px] font-normal text-start mb-11 leading-13">{Card.title}</h3>
-              <p className="font-poppins text-[16px] text-gray-800 font-normal text-start">{Card.text}</p>
-              <a href="" className="font-Montserrat font-medium text-[14px] text-start ">{Card.button}</a>
+        {/* Grid de Cards Animado */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+          className="flex flex-col xl:flex-row gap-8 items-stretch justify-around w-full"
+        >
+          {cards.map((card) => (
+            <motion.div 
+              key={card.id} 
+              variants={cardVariants}
+              className="flex flex-col bg-white w-full xl:w-1/3 shadow-2xl hover:shadow-brand/10 transition-shadow duration-500"
+            >
+              <div className="flex flex-col gap-3 p-8 flex-grow">
+                <p className="font-Montserrat text-brand2 text-[12px] font-bold uppercase tracking-wider">{card.tag}</p>
+                <h3 className="font-Montserrat text-[24px] font-semibold text-gray-900 leading-tight min-h-[60px]">
+                  {card.title}
+                </h3>
+                <p className="font-poppins text-[15px] text-gray-600 font-normal leading-relaxed">
+                  {card.text}
+                </p>
+                <a href="#" className="font-Montserrat font-bold text-[13px] text-brand mt-4 flex items-center gap-2 hover:gap-4 transition-all">
+                  {card.button.toUpperCase()} <span>→</span>
+                </a>
               </div>
-              <div className="relative w-full h-40 mt-9">
+              
+              <div className="relative w-full h-48 overflow-hidden">
                 <Image
-                  src={Card.image}
+                  src={card.image}
                   fill
-                  alt=""
-                  className="w-full object-cover relative"
+                  alt={card.title}
+                  className="object-cover hover:scale-110 transition-transform duration-700"
                 />
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

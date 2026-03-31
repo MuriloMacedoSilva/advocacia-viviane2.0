@@ -1,20 +1,31 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 import FifthSection from "./FifthSection";
 
 export default function FourthSection() {
   return (
-    <section className="relative flex flex-col md:px-[13%]">
+    <section className="relative flex flex-col md:px-[9%] overflow-hidden">
       <Image
         src="/bg-services.svg"
         alt=""
         fill
-        className="w-full relative object-cover"
+        className="w-full object-cover -z-10"
       />
 
-      <div className="w-full relative z-10 h-160 lg:h-87.5 flex items-center justify-start">
-        <h2 className="font-Montserrat text-white font-medium text-[27px] md:text-[36px] w-full lg:w-[70%] h-40 flex items-center justify-center flex-col border-l-5 pl-8 border-brand">
-          "Não remediamos processos; Previnimos a falência da confiança."
-        </h2>
+      <div className="w-full relative z-10 h-160 lg:h-87.5 flex items-center justify-start py-20">
+        {/* Animação da Frase */}
+        <motion.h2 
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="font-Montserrat text-white font-medium text-[27px] md:text-[36px] w-full lg:w-[70%] border-l-5 pl-8 border-brand leading-tight"
+        >
+          "Não remediamos processos; <br /> 
+          <span className="text-brand">Prevenimos</span> a falência da confiança."
+        </motion.h2>
       </div>
 
       <FifthSection />
