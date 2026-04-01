@@ -69,7 +69,7 @@ export default function FifthSection() {
           viewport={{ once: true }}
           className="flex flex-col w-full xl:w-[75%] items-start"
         >
-          <p className="font-Montserrat text-[14px] text-white font-medium uppercase tracking-widest text-brand">Soluções</p>
+          <p className="font-Montserrat text-[14px] font-medium uppercase tracking-widest text-brand">Soluções</p>
           <h2 className="font-Montserrat text-[40px] md:text-[48px] text-white font-medium">Nossas áreas de atuação.</h2>
           <p className="font-poppins font-normal text-[16px] text-white/80 max-w-2xl">
             Proteção integral contra riscos legais e operacionais. Soluções
@@ -90,14 +90,14 @@ export default function FifthSection() {
             <motion.div 
               key={card.id} 
               variants={cardVariants}
-              className="flex flex-col bg-white w-full xl:w-1/3 shadow-2xl hover:shadow-brand/10 transition-shadow duration-500"
+              className="flex flex-col bg-white/5 backdrop-blur-md border border-white/20 w-full xl:w-1/3 shadow-2xl hover:shadow-brand/10 transition-shadow duration-500"
             >
-              <div className="flex flex-col gap-3 p-8 flex-grow">
+              <div className="flex flex-col gap-3 p-8 grow">
                 <p className="font-Montserrat text-brand2 text-[12px] font-bold uppercase tracking-wider">{card.tag}</p>
-                <h3 className="font-Montserrat text-[24px] font-semibold text-gray-900 leading-tight min-h-[60px]">
+                <h3 className="font-Montserrat text-[24px] font-semibold text-white leading-tight min-h-15">
                   {card.title}
                 </h3>
-                <p className="font-poppins text-[15px] text-gray-600 font-normal leading-relaxed">
+                <p className="font-poppins text-[15px] text-white font-normal leading-relaxed">
                   {card.text}
                 </p>
                 <a href="https://api.whatsapp.com/send/?phone=%2B5511996669191&text&type=phone_number&app_absent=0" target="blank" className="font-Montserrat font-bold text-[13px] text-brand mt-4 flex items-center gap-2 hover:gap-4 transition-all">
