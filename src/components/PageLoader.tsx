@@ -1,20 +1,15 @@
 "use client";
-
 import { useState, useEffect } from "react";
-import Loading from "@/app/loading"; // Importa o seu loading.tsx atual
+import Loading from "@/app/loading";
 
-export default function PageLoader({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function PageLoader({ children }: { children: React.ReactNode }) {
   const [isReady, setIsReady] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Esta função será chamada quando TUDO (incluindo imagens) carregar
-    const handleLoad = () => {
-      setIsReady(true);
-    };
+    setMounted(true);
+    
+    const handleLoad = () => setIsReady(true);
 
     if (document.readyState === "complete") {
       handleLoad();
@@ -22,7 +17,6 @@ export default function PageLoader({
       window.addEventListener("load", handleLoad);
     }
 
-    // Timer de segurança: se em 10s não carregar, libera o site
     const timer = setTimeout(() => setIsReady(true), 10000);
 
     return () => {
@@ -31,13 +25,13 @@ export default function PageLoader({
     };
   }, []);
 
+  // Antes de montar no cliente, renderiza os filhos normalmente (SSR)
+  if (!mounted) return <>{children}</>;
+
   return (
     <>
       {!isReady && <Loading />}
-      <div
-        className={isReady ? "opacity-100" : "opacity-0"}
-        style={{ transition: "opacity 0.5s" }}
-      >
+      <div style={{ opacity: isReady ? 1 : 0, transition: "opacity 0.5s" }}>
         {children}
       </div>
     </>

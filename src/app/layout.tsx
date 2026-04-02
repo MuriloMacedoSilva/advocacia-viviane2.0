@@ -1,47 +1,50 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import WhatsApp from "@/components/WhatsApp";
+import Footer from "@/components/sections/Footer";
 
+// ─── Fontes via next/font (zero requisição ao Google em runtime) ──────────────
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+  preload: true,
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+  preload: true,
+});
+
+// ─── Metadata SEO ─────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Viviane Luiz Macedo | Compliance e Advocacia Empresarial",
+  title: {
+    default: "Viviane Luiz Macedo | Compliance e Advocacia Empresarial",
+    template: "%s | Viviane Luiz Macedo Advocacia",
+  },
   description:
     "Advocacia Empresarial especializada em Compliance estratégico. Mitigue riscos, impulsione a governança corporativa e garanta integridade regulatória. Fale conosco!",
-
-  // Define a URL base para não precisar repetir o domínio em todas as imagens
+  keywords: [
+    "advocacia empresarial",
+    "compliance",
+    "governança corporativa",
+    "direito tributário",
+    "gestão de riscos",
+    "contratos empresariais",
+    "advogada São Paulo",
+    "Viviane Luiz Macedo",
+  ],
+  authors: [
+    { name: "Viviane Luiz Macedo", url: "https://www.advocaciaviviane.com.br" },
+  ],
   metadataBase: new URL("https://www.advocaciaviviane.com.br"),
-
-  alternates: {
-    canonical: "/",
-  },
-
-  openGraph: {
-    title: "Viviane Luiz Macedo | Compliance e Advocacia Empresarial",
-    description:
-      "Advocacia Empresarial especializada em Compliance estratégico. Mitigue riscos, impulsione a governança corporativa e garanta integridade regulatória. Fale conosco!",
-    url: "https://www.advocaciaviviane.com.br",
-    siteName: "Viviane Luiz Macedo Advocacia",
-    locale: "pt_BR",
-    type: "website",
-    images: [
-      {
-        url: "/LogoLink.svg", // Recomendado colocar a imagem na pasta public/
-        width: 1200,
-        height: 630,
-        alt: "Viviane Luiz Macedo - Compliance e Advocacia Empresarial",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    title: "Viviane Luiz Macedo | Compliance e Advocacia Empresarial",
-    description:
-      "Compliance estratégico e integridade regulatória para sua empresa.",
-    images: ["/LogoLink.svg"],
-  },
-
+  alternates: { canonical: "/" },
   robots: {
     index: true,
     follow: true,
@@ -53,29 +56,88 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  openGraph: {
+    title: "Viviane Luiz Macedo | Compliance e Advocacia Empresarial",
+    description:
+      "Advocacia Empresarial especializada em Compliance estratégico. Mitigue riscos, impulsione a governança corporativa e garanta integridade regulatória. Fale conosco!",
+    url: "https://www.advocaciaviviane.com.br",
+    siteName: "Viviane Luiz Macedo Advocacia",
+    locale: "pt_BR",
+    type: "website",
+    images: [
+      {
+        url: "/LogoLink.svg",
+        width: 1200,
+        height: 630,
+        alt: "Viviane Luiz Macedo - Compliance e Advocacia Empresarial",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Viviane Luiz Macedo | Compliance e Advocacia Empresarial",
+    description:
+      "Compliance estratégico e integridade regulatória para sua empresa.",
+    images: ["/LogoLink.svg"],
+  },
 };
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// ─── Schema.org ───────────────────────────────────────────────────────────────
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  name: "Viviane Luiz Macedo Advocacia",
+  description:
+    "Compliance estratégico e advocacia empresarial. Especialistas em governança corporativa, contratos, direito tributário e gestão de riscos.",
+  url: "https://www.advocaciaviviane.com.br",
+  telephone: "+5511996669191",
+  email: "vivianemacedoadv@adv.oabsp.org.br",
+  foundingDate: "2018",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "São Paulo",
+    addressRegion: "SP",
+    addressCountry: "BR",
+  },
+  founder: {
+    "@type": "Person",
+    name: "Viviane Luiz Macedo",
+    jobTitle: "Advogada e CEO",
+    description:
+      "Advogada desde 2008, com +15 anos de experiência em compliance corporativo e governança.",
+  },
+  areaServed: { "@type": "Country", name: "Brasil" },
+  serviceType: [
+    "Compliance Empresarial",
+    "Governança Corporativa",
+    "Direito Tributário",
+    "Engenharia Contratual",
+    "Gestão de Crise",
+  ],
+};
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
+// ─── Layout ───────────────────────────────────────────────────────────────────
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
-      lang="pt-br"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang="pt-BR"
+      className={`${montserrat.variable} ${poppins.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <link rel="preconnect" href="https://api.whatsapp.com" />
+      </head>
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <Header />
+        {children}
+        <WhatsApp />
+        <Footer />
+      </body>
     </html>
   );
 }
