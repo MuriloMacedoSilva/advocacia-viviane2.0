@@ -39,12 +39,13 @@ export default function FirstSection() {
         className="absolute -z-2 min-w-full min-h-full object-cover"
       >
         <source src="/backgroundBreake2.webm" type="video/webm" />
+        <source src="/backgroundBreake2mp.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay escuro */}
       <div className="absolute inset-0 -z-1 bg-black/50" />
 
-      {/* REMOVA essa linha abaixo — ela causa o hydration error */}
+      {/* ❌ REMOVA essa linha abaixo — ela causa o hydration error */}
       {/* <div className="absolute inset-0 -z-3 bg-gray-950" /> */}
 
       {/* Container Principal */}
