@@ -1,10 +1,10 @@
-import dynamic from "next/dynamic";
 
-const ThirdSection = dynamic(() => import("@/components/sections/ThirdSection"));
-const FourthSection = dynamic(() => import("@/components/sections/FourthSection"));
-const ProtocolSection = dynamic(() => import("@/components/sections/ProtocolSection"));
-const FinalCTA = dynamic(() => import("@/components/sections/FinalCTA"));
-const CEOSection = dynamic(() => import("@/components/sections/CEOSection"));
+import ThirdSection from "@/components/sections/ThirdSection";
+import FourthSection from "@/components/sections/FourthSection";
+import ProtocolSection from "@/components/sections/ProtocolSection";
+import FinalCTA from "@/components/sections/FinalCTA";
+import CEOSection from "@/components/sections/CEOSection";
+import Footer from "@/components/sections/Footer";
 
 // Essas duas carregam normalmente (estão no topo da página)
 import FirstSection from "@/components/sections/FirstSection";
