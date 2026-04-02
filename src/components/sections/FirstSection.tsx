@@ -39,7 +39,7 @@ export default function FirstSection() {
         className="absolute -z-2 min-w-full min-h-full object-cover"
       >
         <source src="/background.webm" type="video/webm" />
-        <source src="/seu_video.mp4" type="video/mp4" />
+        <source src="/backgroundBreak.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay escuro */}
