@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/LogoLink.svg",
+        url: "og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Viviane Luiz Macedo - Compliance e Advocacia Empresarial",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     title: "Viviane Luiz Macedo | Compliance e Advocacia Empresarial",
     description:
       "Compliance estratégico e integridade regulatória para sua empresa.",
-    images: ["/LogoLink.svg"],
+    images: ["/og-image.jpg"],
   },
 };
 
