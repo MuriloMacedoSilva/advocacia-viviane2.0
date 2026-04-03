@@ -21,7 +21,7 @@ const sectionsData: SectionData[] = [
     title: "Um cliente insatisfeito é um detrator viral.",
     text: "A reputação se constrói lentamente e desmorona em segundos quando o compliance falha na ponta da entrega.",
     button: "Entender",
-    image: "/phone.svg",
+    image: "/phone.webp",
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const sectionsData: SectionData[] = [
     title: "O CAC é desperdiçado quando o compliance falha.",
     text: "Cada cliente adquirido representa investimento. Quando o alinhamento legal falha, esse investimento vira perda irreversível.",
     button: "Mitigar",
-    image: "/tower.svg",
+    image: "/tower.webp",
   },
   {
     id: 3,

@@ -34,7 +34,7 @@ export default function FirstSection() {
       {/* Vídeo apenas no desktop */}
       <video
         ref={videoRef}
-        poster="/background1.webp"
+        poster="/background1-1.webp"
         autoPlay
         loop
         muted
@@ -48,7 +48,7 @@ export default function FirstSection() {
       {/* Imagem estática para mobile — leve e rápida */}
       <div className="block md:hidden absolute inset-0 -z-2">
         <Image
-          src="/background1.webp"
+          src="/background1-1.webp"
           alt=""
           fill
           className="object-cover"

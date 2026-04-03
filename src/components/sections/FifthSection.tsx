@@ -27,7 +27,7 @@ const cards: Card[] = [
     title: "Compliance 360 & governança.",
     text: "Alinhamento integral às normas regulatórias e mitigação preventiva de riscos estatutários.",
     button: "Explorar",
-    image: "/cared2.svg",
+    image: "/cared2.webp",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const cards: Card[] = [
     title: "Gestão de crise e recuperação de clientes.",
     text: "Metodologia exclusiva que converte reclamações críticas em casos de fidelização e recompra.",
     button: "Investigar",
-    image: "/card3.svg",
+    image: "/card3.webp",
   },
 ];
 

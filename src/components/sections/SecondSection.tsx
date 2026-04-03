@@ -21,7 +21,7 @@ export default function SecondSection() {
     <section className="w-full relative flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 lg:gap-20 py-40 bg-linear-to-b from-white to-gray-100 overflow-hidden">
       {/* ✅ loading="lazy" — está abaixo do fold, não precisa carregar cedo */}
       <Image
-        src="/energySolar.svg"
+        src="/energySolar.webp"
         alt=""
         fill
         className="object-cover z-0"
