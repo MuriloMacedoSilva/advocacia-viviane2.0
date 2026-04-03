@@ -48,7 +48,7 @@ export default function FirstSection() {
       {/* Imagem estática para mobile — leve e rápida */}
       <div className="block md:hidden absolute inset-0 -z-2">
         <Image
-          src="/background1-1.webp"
+          src="/background1.webp"
           alt=""
           fill
           className="object-cover"
