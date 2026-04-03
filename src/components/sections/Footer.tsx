@@ -66,16 +66,16 @@ export default function Footer() {
               Institucional
             </h4>
             <div className="grid grid-cols-1 gap-3 font-poppins text-[14px] text-white/80">
-              <a href="/privacidade" className="hover:text-brand transition-colors">
+              <a href="/privacidade" target="blank" className="hover:text-brand transition-colors">
                 Política de Privacidade
               </a>
-              <a href="/termos" className="hover:text-brand transition-colors">
+              <a href="/termos" target="blank" className="hover:text-brand transition-colors">
                 Termos de Uso
               </a>
-              <a href="https://www.instagram.com/dra.v_luizmacedoadvogada/" className="hover:text-brand transition-colors">
+              <a href="https://www.instagram.com/dra.v_luizmacedoadvogada/" target="blank" className="hover:text-brand transition-colors">
                 Instagram
               </a>
-              <a href="https://www.linkedin.com/in/viviane-luiz-macedobr/" className="hover:text-brand transition-colors">
+              <a href="https://www.linkedin.com/in/viviane-luiz-macedobr/" target="blank" className="hover:text-brand transition-colors">
                 LinkedIn
               </a>
             </div>

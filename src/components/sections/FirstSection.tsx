@@ -113,7 +113,8 @@ export default function FirstSection() {
             Solicitar Diagnóstico de Vulnerabilidade
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/viviane-luiz-macedobr/"
+            target="blank"
             className="bg-white/5 backdrop-blur-md border border-white/20 flex items-center justify-center p-3 text-white w-[90%] md:w-[50%] transition-all duration-300 hover:bg-white/20 text-[14px] xl:text-[16px] h-14"
           >
             Nos acompanhe nas redes
