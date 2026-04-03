@@ -39,7 +39,7 @@ export default function CEOSection() {
           <div className="absolute inset-0 border-2 border-brand translate-x-4 translate-y-4 -z-10 hidden md:block" />
           {/* ✅ loading="lazy" — está no final da página, longe do fold */}
           <Image
-            src="/Viviane.svg"
+            src="/Viviane.webp"
             alt="Viviane Luiz Macedo - Advogada e CEO"
             fill
             className="object-cover grayscale hover:grayscale-0 transition-all duration-700"

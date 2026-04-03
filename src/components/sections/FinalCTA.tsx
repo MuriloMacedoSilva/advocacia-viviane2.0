@@ -26,7 +26,7 @@ export default function FinalCTA() {
     <section className="relative w-full py-32 md:py-48 flex items-center justify-center overflow-hidden">
       {/* ✅ loading="lazy" — seção está próxima ao fim da página */}
       <Image
-        src="/back4.svg"
+        src="/back4.webp"
         alt=""
         fill
         className="object-cover -z-1"

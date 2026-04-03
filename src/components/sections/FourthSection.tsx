@@ -9,7 +9,7 @@ export default function FourthSection() {
     <section className="relative flex flex-col md:px-[9%] overflow-hidden">
       {/* ✅ loading="lazy" e aria-hidden para imagem decorativa de fundo */}
       <Image
-        src="/bg-services.svg"
+        src="/bg-services.webp"
         alt=""
         fill
         className="w-full object-cover -z-10"
