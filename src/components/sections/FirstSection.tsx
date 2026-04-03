@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useRef } from "react";
 import { motion, Variants } from "framer-motion";
 
@@ -29,6 +31,7 @@ export default function FirstSection() {
           que aparece instantaneamente enquanto o vídeo carrega.
         - O vídeo em si não conta para o LCP — apenas imagens e textos contam.
       */}
+      {/* Vídeo apenas no desktop */}
       <video
         ref={videoRef}
         poster="/background1.svg"
@@ -36,11 +39,23 @@ export default function FirstSection() {
         loop
         muted
         playsInline
-        className="absolute -z-2 min-w-full min-h-full object-cover"
+        className="hidden md:block absolute -z-2 min-w-full min-h-full object-cover"
       >
         <source src="/backgroundBreake2.webm" type="video/webm" />
         <source src="/backgroundBreake2mp.mp4" type="video/mp4" />
       </video>
+
+      {/* Imagem estática para mobile — leve e rápida */}
+      <div className="block md:hidden absolute inset-0 -z-2">
+        <Image
+          src="/background1.svg"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+          aria-hidden="true"
+        />
+      </div>
 
       {/* Overlay escuro */}
       <div className="absolute inset-0 -z-1 bg-black/50" />
