@@ -13,7 +13,11 @@ const containerVariants: Variants = {
 
 const imageVariants: Variants = {
   hidden: { opacity: 0, scale: 0.9 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 1, ease: "easeOut" } },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 1, ease: "easeOut" },
+  },
 };
 
 const textVariants: Variants = {
@@ -34,15 +38,25 @@ export default function CEOSection() {
         {/* Foto da CEO */}
         <motion.div
           variants={imageVariants}
-          className="relative w-full lg:w-1/2 aspect-[4/5] md:aspect-square lg:aspect-[4/5]"
+          className="relative w-full lg:w-1/2 aspect-4/5 md:aspect-square lg:aspect-4/5"
         >
           <div className="absolute inset-0 border-2 border-brand translate-x-4 translate-y-4 -z-10 hidden md:block" />
           {/* ✅ loading="lazy" — está no final da página, longe do fold */}
+          {/* Foto desktop — esconde no mobile */}
           <Image
             src="/Viviane-1.webp"
             alt="Viviane Luiz Macedo - Advogada e CEO"
             fill
-            className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+            className="hidden md:block object-cover grayscale hover:grayscale-0 transition-all duration-700"
+            loading="lazy"
+          />
+
+          {/* Foto mobile — esconde no desktop */}
+          <Image
+            src="/Viviane.webp"
+            alt="Viviane Luiz Macedo - Advogada e CEO"
+            fill
+            className="block md:hidden object-cover grayscale hover:grayscale-0 transition-all duration-700"
             loading="lazy"
           />
           <div className="absolute bottom-8 left-8">
@@ -62,22 +76,22 @@ export default function CEOSection() {
           </h2>
           <div className="space-y-6">
             <p className="font-poppins text-[16px] text-gray-700 leading-relaxed">
-              Advogada desde 2008, com ampla vivência corporativa em compliance e
-              governança, liderou projetos, implementou controles internos e
+              Advogada desde 2008, com ampla vivência corporativa em compliance
+              e governança, liderou projetos, implementou controles internos e
               conduziu auditorias. Segue expandindo sua atuação em assessoria
               preventiva a médias e grandes empresas, apoiada por um forte
-              networking em compliance e expertise em gestão de riscos, revisão de
-              contratos complexos, auditoria interna, comunicação persuasiva e
-              treinamentos técnicos.
+              networking em compliance e expertise em gestão de riscos, revisão
+              de contratos complexos, auditoria interna, comunicação persuasiva
+              e treinamentos técnicos.
             </p>
             <p className="font-poppins text-[16px] text-gray-700 leading-relaxed border-l-4 border-brand2 pl-6 italic">
-              A Viviane Luiz Macedo Advocacia nasce de uma experiência de 15 anos
-              em ambientes corporativos. Desde 2018, oferecendo serviços
+              A Viviane Luiz Macedo Advocacia nasce de uma experiência de 15
+              anos em ambientes corporativos. Desde 2018, oferecendo serviços
               especializados na gestão de escritórios de advocacia, prestando
               assessoria preventiva a empresas de todos os portes, amparada por
               uma sólida rede de parcerias. Com técnica apurada e sensibilidade
-              social, capta clientes e alianças comprometidos com a transparência
-              e a ética organizacional.
+              social, capta clientes e alianças comprometidos com a
+              transparência e a ética organizacional.
             </p>
           </div>
         </motion.div>
