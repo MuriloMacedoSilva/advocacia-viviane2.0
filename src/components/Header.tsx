@@ -15,7 +15,7 @@ export default function Header() {
         width={300}
         height={100}
         alt="logo"
-        className="z-20 w-50 md:w-75"
+        className="z-20 w-40 md:w-55"
       />
 
       <a
