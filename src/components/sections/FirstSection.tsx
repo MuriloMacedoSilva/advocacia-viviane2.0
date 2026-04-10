@@ -18,20 +18,14 @@ const itemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
+const CLOUDINARY_VIDEO_URL = "https://res.cloudinary.com/dhtjefgr3/video/upload/q_auto:best/v1775830202/7318604-hd_1366_658_30fps_jumbhw.mp4";
+
 export default function FirstSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
     <section className="relative w-full h-screen xl:h-auto 2xl:h-[80vh] flex flex-col items-center justify-center overflow-hidden">
-      {/*
-        ✅ OTIMIZAÇÃO DE LCP:
-        - Removemos o poster="/background1.svg" do <video> pois ele era carregado
-          como <img> sem otimização, sendo o maior elemento do LCP.
-        - Substituímos por um <div> com a cor de fundo escura como fallback,
-          que aparece instantaneamente enquanto o vídeo carrega.
-        - O vídeo em si não conta para o LCP — apenas imagens e textos contam.
-      */}
-      {/* Vídeo apenas no desktop */}
+      {/* Vídeo do Cloudinary */}
       <video
         ref={videoRef}
         poster="/background1-1.webp"
@@ -41,8 +35,7 @@ export default function FirstSection() {
         playsInline
         className="hidden md:block absolute -z-2 min-w-full min-h-full object-cover"
       >
-        <source src="/backgroundBreake2.webm" type="video/webm" />
-        <source src="/backgroundBreake2mp.mp4" type="video/mp4" />
+        <source src={CLOUDINARY_VIDEO_URL} type="video/mp4" />
       </video>
 
       {/* Imagem estática para mobile — leve e rápida */}
@@ -59,9 +52,6 @@ export default function FirstSection() {
 
       {/* Overlay escuro */}
       <div className="absolute inset-0 -z-1 bg-black/50" />
-
-      {/* ❌ REMOVA essa linha abaixo — ela causa o hydration error */}
-      {/* <div className="absolute inset-0 -z-3 bg-gray-950" /> */}
 
       {/* Container Principal */}
       <motion.div
