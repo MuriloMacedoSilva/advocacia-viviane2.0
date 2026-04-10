@@ -51,7 +51,7 @@ export default function FirstSection() {
       </div>
 
       {/* Overlay escuro */}
-      <div className="absolute inset-0 -z-1 bg-black/50" />
+      <div className="absolute inset-0 -z-1 bg-black/15" />
 
       {/* Container Principal */}
       <motion.div

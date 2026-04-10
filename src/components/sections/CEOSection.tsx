@@ -25,6 +25,8 @@ const textVariants: Variants = {
   visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
+const CLOUDINARY_CEO_IMAGE = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_auto/f_auto/v1775862452/Viviane_1_uywjqa.jpg";
+
 export default function CEOSection() {
   return (
     <section className="w-full bg-white py-20 flex justify-center overflow-hidden">
@@ -41,10 +43,10 @@ export default function CEOSection() {
           className="relative w-full lg:w-1/2 aspect-4/5 md:aspect-square lg:aspect-4/5"
         >
           <div className="absolute inset-0 border-2 border-brand translate-x-4 translate-y-4 -z-10 hidden md:block" />
-          {/* ✅ loading="lazy" — está no final da página, longe do fold */}
+          {/* ✅ loading="lazy" — está no final da página, lejos do fold */}
           {/* Foto desktop — esconde no mobile */}
           <Image
-            src="/Viviane-1.webp"
+            src={CLOUDINARY_CEO_IMAGE}
             alt="Viviane Luiz Macedo - Advogada e CEO"
             fill
             className="hidden md:block object-cover grayscale hover:grayscale-0 transition-all duration-700"
@@ -53,7 +55,16 @@ export default function CEOSection() {
 
           {/* Foto mobile — esconde no desktop */}
           <Image
-            src="/Viviane.webp"
+            src={CLOUDINARY_CEO_IMAGE}
+            alt="Viviane Luiz Macedo - Advogada e CEO"
+            fill
+            className="hidden md:block object-cover grayscale hover:grayscale-0 transition-all duration-700"
+            loading="lazy"
+          />
+
+          {/* Foto mobile — esconde no desktop */}
+          <Image
+            src={CLOUDINARY_CEO_IMAGE}
             alt="Viviane Luiz Macedo - Advogada e CEO"
             fill
             className="block md:hidden object-cover grayscale hover:grayscale-0 transition-all duration-700"

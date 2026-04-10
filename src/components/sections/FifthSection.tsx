@@ -12,6 +12,12 @@ interface Card {
   image: string;
 }
 
+const CLOUDINARY_CARDS = [
+  "https://res.cloudinary.com/dhtjefgr3/image/upload/q_auto/f_auto/v1775830481/card1_kds2ts.svg",
+  "https://res.cloudinary.com/dhtjefgr3/image/upload/q_auto/f_auto/v1775830528/cared2_cuaxkg.svg",
+  "https://res.cloudinary.com/dhtjefgr3/image/upload/q_auto/f_auto/v1775830510/card3_c2r1yr.svg",
+];
+
 const cards: Card[] = [
   {
     id: 1,
@@ -19,7 +25,7 @@ const cards: Card[] = [
     title: "Engenharia contratual e tributária.",
     text: "Estruturação de contratos resilientes e otimização da carga tributária para maximizar o EBITDA.",
     button: "Aprofundar",
-    image: "/card1.svg",
+    image: CLOUDINARY_CARDS[0],
   },
   {
     id: 2,
@@ -27,7 +33,7 @@ const cards: Card[] = [
     title: "Compliance 360 & governança.",
     text: "Alinhamento integral às normas regulatórias e mitigação preventiva de riscos estatutários.",
     button: "Explorar",
-    image: "/cared2.webp",
+    image: CLOUDINARY_CARDS[1],
   },
   {
     id: 3,
@@ -35,7 +41,7 @@ const cards: Card[] = [
     title: "Gestão de crise e recuperação de clientes.",
     text: "Metodologia exclusiva que converte reclamações críticas em casos de fidelização e recompra.",
     button: "Investigar",
-    image: "/card3.webp",
+    image: CLOUDINARY_CARDS[2],
   },
 ];
 

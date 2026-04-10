@@ -16,12 +16,14 @@ const itemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
 };
 
+const CLOUDINARY_IMAGE = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_auto/f_auto/v1775830550/energySolar_gofeao.svg";
+
 export default function SecondSection() {
   return (
     <section className="w-full relative flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 lg:gap-20 py-40 bg-linear-to-b from-white to-gray-100 overflow-hidden">
       {/* ✅ loading="lazy" — está abaixo do fold, não precisa carregar cedo */}
       <Image
-        src="/energySolar.webp"
+        src={CLOUDINARY_IMAGE}
         alt=""
         fill
         className="object-cover z-0"

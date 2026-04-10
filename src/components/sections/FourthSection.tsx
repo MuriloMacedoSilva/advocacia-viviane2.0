@@ -4,12 +4,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import FifthSection from "./FifthSection";
 
+const CLOUDINARY_FOURTH = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_auto/f_auto/v1775830488/bg-services_spg5lz.svg";
+
 export default function FourthSection() {
   return (
     <section className="relative flex flex-col md:px-[9%] overflow-hidden">
       {/* ✅ loading="lazy" e aria-hidden para imagem decorativa de fundo */}
       <Image
-        src="/bg-services.webp"
+        src={CLOUDINARY_FOURTH}
         alt=""
         fill
         className="w-full object-cover -z-10"

@@ -21,12 +21,14 @@ const childVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
+const CLOUDINARY_FINAL = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_auto/f_auto/v1775830422/back4_dnfrpt.svg";
+
 export default function FinalCTA() {
   return (
     <section className="relative w-full py-32 md:py-48 flex items-center justify-center overflow-hidden">
       {/* ✅ loading="lazy" — seção está próxima ao fim da página */}
       <Image
-        src="/back4.webp"
+        src={CLOUDINARY_FINAL}
         alt=""
         fill
         className="object-cover -z-1"
