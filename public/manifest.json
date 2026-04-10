@@ -1,0 +1,16 @@
+{
+  "name": "Viviane Luiz Macedo Advocacia",
+  "short_name": "Viviane Advocacia",
+  "description": "Advocacia Empresarial especializada em Compliance estratégico",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121731",
+  "theme_color": "#FFBF76",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

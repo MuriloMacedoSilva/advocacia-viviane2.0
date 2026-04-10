@@ -45,6 +45,8 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL("https://www.advocaciaviviane.com.br"),
   alternates: { canonical: "/" },
+  manifest: "/manifest.json",
+  themeColor: "#FFBF76",
   robots: {
     index: true,
     follow: true,
