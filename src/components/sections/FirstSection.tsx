@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
 
 const containerVariants: Variants = {
@@ -19,36 +19,49 @@ const itemVariants: Variants = {
 };
 
 const CLOUDINARY_VIDEO_URL = "https://res.cloudinary.com/dhtjefgr3/video/upload/q_auto:best/v1775830202/7318604-hd_1366_658_30fps_jumbhw.mp4";
+const CLOUDINARY_POSTER = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_auto,f_auto/v1775830189/background1-1";
 
 export default function FirstSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoFailed, setVideoFailed] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    
+    const handleError = () => setVideoFailed(true);
+    video.addEventListener('error', handleError);
+    
+    return () => video.removeEventListener('error', handleError);
+  }, []);
 
   return (
     <section className="relative w-full h-screen xl:h-auto 2xl:h-[80vh] flex flex-col items-center justify-center overflow-hidden">
-      {/* Vídeo do Cloudinary */}
+      {/* Vídeo do Cloudinary - sempre tenta rodar, fallback se falhar */}
       <video
         ref={videoRef}
-        poster="/background1-1.webp"
+        poster={CLOUDINARY_POSTER}
         autoPlay
         loop
         muted
         playsInline
-        className="hidden md:block absolute -z-2 min-w-full min-h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover -z-2"
+        onError={() => setVideoFailed(true)}
       >
         <source src={CLOUDINARY_VIDEO_URL} type="video/mp4" />
       </video>
 
-      {/* Imagem estática para mobile — leve e rápida */}
-      <div className="block md:hidden absolute inset-0 -z-2">
+      {/* Imagem fallback - só mostra se vídeo falhar */}
+      {videoFailed && (
         <Image
-          src="/background1.webp"
+          src={CLOUDINARY_POSTER}
           alt=""
           fill
-          className="object-cover"
+          className="absolute inset-0 object-cover -z-2"
           priority
           aria-hidden="true"
         />
-      </div>
+      )}
 
       {/* Overlay escuro */}
       <div className="absolute inset-0 -z-1 bg-black/15" />
