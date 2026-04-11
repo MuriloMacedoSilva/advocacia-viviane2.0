@@ -23,24 +23,21 @@ const CLOUDINARY_POSTER = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_a
 
 export default function FirstSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoFailed, setVideoFailed] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(true);
 
   useEffect(() => {
     const checkVideoSupport = () => {
-      if (typeof window === 'undefined') return false;
       const video = document.createElement('video');
       const canPlay = video.canPlayType?.('video/mp4');
-      return canPlay && canPlay !== 'no';
+      return canPlay === 'probably' || canPlay === 'maybe';
     };
 
     const checkReducedData = () => {
-      if (typeof window === 'undefined') return false;
       return window.matchMedia?.('(prefers-reduced-data: reduce)')?.matches || false;
     };
 
-    if (checkVideoSupport() === false || checkReducedData()) {
-      setVideoFailed(true);
-      return;
+    if (checkVideoSupport() && !checkReducedData()) {
+      setVideoFailed(false);
     }
 
     const video = videoRef.current;
