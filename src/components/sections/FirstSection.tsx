@@ -26,33 +26,40 @@ export default function FirstSection() {
   const [videoFailed, setVideoFailed] = useState(false);
 
   useEffect(() => {
+    const checkVideoSupport = () => {
+      if (typeof window === 'undefined') return false;
+      const video = document.createElement('video');
+      const canPlay = video.canPlayType?.('video/mp4');
+      return canPlay && canPlay !== 'no';
+    };
+
+    const checkReducedData = () => {
+      if (typeof window === 'undefined') return false;
+      return window.matchMedia?.('(prefers-reduced-data: reduce)')?.matches || false;
+    };
+
+    if (checkVideoSupport() === false || checkReducedData()) {
+      setVideoFailed(true);
+      return;
+    }
+
     const video = videoRef.current;
     if (!video) return;
-    
+
     const handleError = () => setVideoFailed(true);
+    const timeout = setTimeout(() => setVideoFailed(true), 5000);
+
     video.addEventListener('error', handleError);
-    
-    return () => video.removeEventListener('error', handleError);
+
+    return () => {
+      video.removeEventListener('error', handleError);
+      clearTimeout(timeout);
+    };
   }, []);
 
   return (
     <section className="relative w-full h-screen xl:h-auto 2xl:h-[80vh] flex flex-col items-center justify-center overflow-hidden">
-      {/* Vídeo do Cloudinary - sempre tenta rodar, fallback se falhar */}
-      <video
-        ref={videoRef}
-        poster={CLOUDINARY_POSTER}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover -z-2"
-        onError={() => setVideoFailed(true)}
-      >
-        <source src={CLOUDINARY_VIDEO_URL} type="video/mp4" />
-      </video>
-
-      {/* Imagem fallback - só mostra se vídeo falhar */}
-      {videoFailed && (
+      {videoFailed ? (
         <Image
           src={CLOUDINARY_POSTER}
           alt=""
@@ -61,6 +68,19 @@ export default function FirstSection() {
           priority
           aria-hidden="true"
         />
+      ) : (
+        <video
+          ref={videoRef}
+          poster={CLOUDINARY_POSTER}
+          autoPlay
+          loop
+          muted
+          playsInline
+          webkit-playsinline="true"
+          className="absolute inset-0 w-full h-full object-cover -z-2"
+        >
+          <source src={CLOUDINARY_VIDEO_URL} type="video/mp4" />
+        </video>
       )}
 
       {/* Overlay escuro */}
