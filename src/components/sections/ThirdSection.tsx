@@ -63,7 +63,7 @@ function AnimatedCard({ section }: { section: SectionData }) {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}
-      className="border-t w-full border-gray-300 flex flex-col lg:flex-row items-center px-[6%] lg:px-30 py-10 md:py-12 overflow-hidden"
+      className="border-t w-full border-gray-300 flex flex-col lg:flex-row items-center px-[6%] lg:px-30 pt-32 md:pt-36 pb-10 md:pb-12 overflow-hidden"
     >
       <div className="flex flex-col gap-4 items-start w-full lg:w-[60%]">
         <motion.p
@@ -121,7 +121,7 @@ function AnimatedCard({ section }: { section: SectionData }) {
 
 export default function ThirdSection() {
   return (
-    <section className="bg-white -mt-32 lg:-mt-48 pt-12 lg:pt-16 pb-16 lg:py-24">
+    <section className="bg-white -mt-32 lg:-mt-48 pt-32 lg:pt-40 pb-16 lg:py-24">
       {sectionsData.map((section) => (
         <AnimatedCard key={section.id} section={section} />
       ))}

@@ -92,14 +92,14 @@ export default function FirstSection() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="flex flex-col items-center justify-center w-[85%] xl:w-[60%] pt-29 xl:pt-0 gap-3 xl:gap-6 2xl:gap-10 md:gap-8 mt-44 lg:mt-40 mb-50"
+        className="flex flex-col items-center justify-center w-[93%] xl:w-[60%] pt-29 xl:pt-0 gap-8 md:gap-8 xl:gap-6 2xl:gap-10 mt-24 md:mt-28 lg:mt-40 mb-50"
       >
         {/* Badge */}
         <motion.div
           variants={itemVariants}
           className="border border-brand p-1.5 rounded-full font-semibold max-w-125 xl:mb-6.5 bg-brand/5 backdrop-blur-sm"
         >
-          <p className="text-brand font-Montserrat xl:text-[10px] text-[7px] text-center tracking-widest">
+          <p className="text-brand font-Montserrat xl:text-[10px] text-[8px] md:text-[9px] text-center tracking-widest">
             BLINDAGEM JURÍDICA E COMPLIANCE ESTRATÉGICO
           </p>
         </motion.div>
@@ -107,7 +107,7 @@ export default function FirstSection() {
         {/* Título — é o LCP textual, sem necessidade de priority adicional */}
         <motion.h1
           variants={itemVariants}
-          className="text-white font-Montserrat font-bold text-[34px] leading-9 xl:text-[54px] text-center xl:leading-15 mb-2 xl:mb-0"
+          className="text-white font-Montserrat font-bold text-[38px] leading-9 xl:text-[54px] text-center xl:leading-15 mb-2 xl:mb-0"
         >
           A invisibilidade do risco é o{" "}
           <span className="text-brand">maior passivo</span> do seu negócio.
@@ -116,7 +116,7 @@ export default function FirstSection() {
         {/* Descrição */}
         <motion.p
           variants={itemVariants}
-          className="text-white font-poppins font-normal text-[12px] xl:text-[15px] text-center w-[90%] xl:w-[80%] opacity-90"
+          className="text-white font-poppins font-normal text-[14px] xl:text-[15px] text-center w-[90%] xl:w-[80%] opacity-90"
         >
           Transformamos contingências legais e atritos de consumo em ativos de
           fidelização. Unimos o rigor do Compliance à inteligência de negócios
@@ -132,14 +132,14 @@ export default function FirstSection() {
             href="https://api.whatsapp.com/send/?phone=%2B5511996669191&text&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-brand border border-brand flex items-center justify-center p-3 text-gray-900 w-[90%] md:w-[50%] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-brand/20 text-[12px] xl:text-[14px] font-bold h-12"
+            className="bg-brand border border-brand flex items-center justify-center p-3 text-gray-900 w-[90%] md:w-[50%] transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-brand/20 text-[15px] xl:text-[14px] font-bold h-14"
           >
             Solicitar Diagnóstico de Vulnerabilidade
           </a>
           <a
             href="https://www.linkedin.com/in/viviane-luiz-macedobr/"
             target="blank"
-            className="bg-white/5 backdrop-blur-md border border-white/20 flex items-center justify-center p-3 text-white w-[90%] md:w-[50%] transition-all duration-300 hover:bg-white/20 text-[12px] xl:text-[14px] h-12"
+            className="bg-white/5 backdrop-blur-md border border-white/20 flex items-center justify-center p-3 text-white w-[90%] md:w-[50%] transition-all duration-300 hover:bg-white/20 text-[15px] xl:text-[14px] h-14"
           >
             Nos acompanhe nas redes
           </a>

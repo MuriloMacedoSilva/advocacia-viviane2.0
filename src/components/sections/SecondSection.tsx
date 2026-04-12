@@ -20,7 +20,7 @@ const CLOUDINARY_IMAGE = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_au
 
 export default function SecondSection() {
   return (
-    <section className="w-full relative flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 lg:gap-20 py-60 lg:py-80 pb-0 overflow-hidden">
+    <section className="w-full relative flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 lg:gap-20 py-60 lg:py-80 pb-40 md:pb-60 lg:pb-80 overflow-hidden">
       {/* ✅ loading="lazy" — está abaixo do fold, não precisa carregar cedo */}
       <Image
         src={CLOUDINARY_IMAGE}
