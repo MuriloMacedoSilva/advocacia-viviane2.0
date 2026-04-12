@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import WhatsApp from "@/components/WhatsApp";
+import WhatsAppWrapper from "@/components/WhatsAppWrapper";
 import Footer from "@/components/sections/Footer";
+import LazyMotionProvider from "@/components/LazyMotionProvider";
 
 // ─── Fontes via next/font (zero requisição ao Google em runtime) ──────────────
 const montserrat = Montserrat({
@@ -135,10 +136,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://api.whatsapp.com" />
       </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <Header />
-        {children}
-        <WhatsApp />
-        <Footer />
+        <LazyMotionProvider>
+          <Header />
+          {children}
+          <WhatsAppWrapper />
+          <Footer />
+        </LazyMotionProvider>
       </body>
     </html>
   );
