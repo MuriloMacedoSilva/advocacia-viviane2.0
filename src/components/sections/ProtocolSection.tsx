@@ -48,7 +48,7 @@ export default function ProtocolSection() {
   };
 
   return (
-    <section className="w-full py-20 bg-white flex justify-center">
+    <section className="w-full py-32 lg:py-48 bg-white flex justify-center">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -58,7 +58,7 @@ export default function ProtocolSection() {
       >
         {/* Cabeçalho da Seção */}
         <motion.div variants={itemVariants} className="text-center mb-16 md:mb-24">
-          <h2 className="font-Montserrat text-[32px] md:text-[48px] font-medium text-black leading-tight">
+          <h2 className="font-Montserrat text-[28px] md:text-[42px] font-medium text-black leading-tight">
             Protocolo de conversão: <br />
             <span className="text-brand2">Do passivo ao lucro.</span>
           </h2>
@@ -74,17 +74,17 @@ export default function ProtocolSection() {
             >
               {/* Número e Linha */}
               <div className="flex items-end gap-2 mb-6">
-                <span className="font-Montserrat text-[48px] font-bold text-gray-200 leading-none group-hover:text-brand2 transition-colors duration-500">
+                <span className="font-Montserrat text-[42px] font-bold text-gray-200 leading-none group-hover:text-brand2 transition-colors duration-500">
                   {step.id}
                 </span>
                 <div className="w-12 h-[2px] bg-brand2 mb-2"></div>
               </div>
 
               {/* Texto */}
-              <h3 className="font-Montserrat text-[20px] md:text-[22px] font-bold text-black mb-4">
+              <h3 className="font-Montserrat text-[18px] md:text-[20px] font-bold text-black mb-4">
                 {step.title}
               </h3>
-              <p className="font-poppins text-[15px] md:text-[16px] text-gray-600 leading-relaxed">
+              <p className="font-poppins text-[14px] md:text-[15px] text-gray-600 leading-relaxed">
                 {step.text}
               </p>
             </motion.div>

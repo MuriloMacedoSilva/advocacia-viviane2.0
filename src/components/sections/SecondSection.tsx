@@ -20,7 +20,7 @@ const CLOUDINARY_IMAGE = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_au
 
 export default function SecondSection() {
   return (
-    <section className="w-full relative flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 lg:gap-20 py-40 bg-linear-to-b from-white to-gray-100 overflow-hidden">
+    <section className="w-full relative flex flex-col items-center justify-center px-[10%] md:px-[25%] gap-37 lg:gap-20 py-60 lg:py-80 pb-0 overflow-hidden">
       {/* ✅ loading="lazy" — está abaixo do fold, não precisa carregar cedo */}
       <Image
         src={CLOUDINARY_IMAGE}
@@ -40,21 +40,21 @@ export default function SecondSection() {
       >
         <motion.h2
           variants={itemVariants}
-          className="text-center relative font-Montserrat font-semibold text-black text-[36px] px-1 leading-9"
+          className="text-center relative font-Montserrat font-semibold text-black text-[32px] px-1 leading-8"
         >
           Expertise chancelada por grandes players globais.
         </motion.h2>
 
         <motion.h3
           variants={itemVariants}
-          className="font-poppins relative font-semibold text-black w-[85%] md:w-full text-[14px] md:text-[23px] justify-center border-x-4 border-brand2 px-13 md:h-20 flex items-center text-center"
+          className="font-poppins relative font-semibold text-black w-[85%] md:w-full text-[13px] md:text-[21px] justify-center border-x-4 border-brand2 px-13 md:h-20 flex items-center text-center"
         >
           Grande player na área de energia solar global
         </motion.h3>
 
         <motion.p
           variants={itemVariants}
-          className="text-center relative font-poppins font-normal text-black text-[16px]"
+          className="text-center relative font-poppins font-normal text-black text-[15px]"
         >
           Responsáveis pela engenharia jurídica e gestão de compliance de
           operações transcontinentais, convertendo crises de consumo em índices
@@ -65,7 +65,7 @@ export default function SecondSection() {
           variants={itemVariants}
           className="flex flex-col relative items-center gap-3"
         >
-          <h2 className="text-center text-brand font-medium font-Montserrat text-[36px]">
+          <h2 className="text-center text-brand font-medium font-Montserrat text-[32px]">
             "O que você não vê está corroendo seu lucro."
           </h2>
           <div className="flex items-center gap-3 w-[80%] md:w-[40%]">

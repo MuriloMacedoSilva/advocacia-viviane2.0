@@ -29,7 +29,7 @@ const CLOUDINARY_CEO_IMAGE = "https://res.cloudinary.com/dhtjefgr3/image/upload/
 
 export default function CEOSection() {
   return (
-    <section className="w-full bg-white py-20 flex justify-center overflow-hidden">
+    <section className="w-full bg-white py-32 lg:py-48 flex justify-center overflow-hidden">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -71,7 +71,7 @@ export default function CEOSection() {
             loading="lazy"
           />
           <div className="absolute bottom-8 left-8">
-            <h3 className="font-Montserrat text-white text-[24px] md:text-[32px] font-bold leading-none">
+            <h3 className="font-Montserrat text-white text-[22px] md:text-[28px] font-bold leading-none">
               VIVIANE LUIZ MACEDO.
             </h3>
           </div>
@@ -82,11 +82,11 @@ export default function CEOSection() {
           variants={textVariants}
           className="w-full lg:w-1/2 flex flex-col gap-6"
         >
-          <h2 className="font-Montserrat text-[36px] md:text-[48px] font-medium text-black leading-tight">
+          <h2 className="font-Montserrat text-[32px] md:text-[42px] font-medium text-black leading-tight">
             Conheça nossa CEO
           </h2>
           <div className="space-y-6">
-            <p className="font-poppins text-[16px] text-gray-700 leading-relaxed">
+            <p className="font-poppins text-[15px] text-gray-700 leading-relaxed">
               Advogada desde 2008, com ampla vivência corporativa em compliance
               e governança, liderou projetos, implementou controles internos e
               conduziu auditorias. Segue expandindo sua atuação em assessoria
@@ -95,7 +95,7 @@ export default function CEOSection() {
               de contratos complexos, auditoria interna, comunicação persuasiva
               e treinamentos técnicos.
             </p>
-            <p className="font-poppins text-[16px] text-gray-700 leading-relaxed border-l-4 border-brand2 pl-6 italic">
+            <p className="font-poppins text-[15px] text-gray-700 leading-relaxed border-l-4 border-brand2 pl-6 italic">
               A Viviane Luiz Macedo Advocacia nasce de uma experiência de 15
               anos em ambientes corporativos. Desde 2018, oferecendo serviços
               especializados na gestão de escritórios de advocacia, prestando

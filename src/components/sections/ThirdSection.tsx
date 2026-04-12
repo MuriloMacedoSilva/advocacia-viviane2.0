@@ -68,25 +68,25 @@ function AnimatedCard({ section }: { section: SectionData }) {
       <div className="flex flex-col gap-4 items-start w-full lg:w-[60%]">
         <motion.p
           variants={itemVariants}
-          className="mb-10 font-poppins text-[14px] text-black font-light tracking-wide"
+          className="mb-10 font-poppins text-[13px] text-black font-light tracking-wide"
         >
           {section.topic}
         </motion.p>
         <motion.p
           variants={itemVariants}
-          className="font-poppins text-brand2 text-[20px] font-normal"
+          className="font-poppins text-brand2 text-[18px] font-normal"
         >
           {section.tag}
         </motion.p>
         <motion.h2
           variants={itemVariants}
-          className="font-Montserrat font-medium text-[38px] md:text-[48px] md:leading-15 text-gray-950"
+          className="font-Montserrat font-medium text-[34px] md:text-[42px] md:leading-14 text-gray-950"
         >
           {section.title}
         </motion.h2>
         <motion.p
           variants={itemVariants}
-          className="font-poppins font-normal text-[16px] text-gray-700 mt-4 max-w-2xl"
+          className="font-poppins font-normal text-[15px] text-gray-700 mt-4 max-w-2xl"
         >
           {section.text}
         </motion.p>
@@ -95,7 +95,7 @@ function AnimatedCard({ section }: { section: SectionData }) {
           href="https://api.whatsapp.com/send/?phone=%2B5511996669191&text&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white bg-blues w-[90%] md:w-[55%] flex items-center justify-center p-3 cursor-pointer border border-blues mt-10 font-poppins text-[16px] font-normal hover:bg-gray-600 duration-200 transition-all hover:scale-[1.03]"
+          className="text-white bg-blues w-[85%] md:w-[50%] flex items-center justify-center p-3 cursor-pointer border border-blues mt-10 font-poppins text-[15px] font-normal hover:bg-gray-600 duration-200 transition-all hover:scale-[1.03]"
         >
           {section.button}
         </motion.a>
@@ -121,7 +121,7 @@ function AnimatedCard({ section }: { section: SectionData }) {
 
 export default function ThirdSection() {
   return (
-    <section className="bg-white">
+    <section className="bg-white -mt-32 lg:-mt-48 pt-12 lg:pt-16 pb-16 lg:py-24">
       {sectionsData.map((section) => (
         <AnimatedCard key={section.id} section={section} />
       ))}

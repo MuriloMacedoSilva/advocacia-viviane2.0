@@ -57,7 +57,7 @@ const cardVariants: Variants = {
 
 export default function FifthSection() {
   return (
-    <section className="w-full py-20 flex items-center relative justify-center">
+    <section className="w-full py-32 lg:py-48 flex items-center relative justify-center">
       <div className="flex flex-col w-full px-3.5 xl:px-0 gap-19">
 
         <motion.div
@@ -66,13 +66,13 @@ export default function FifthSection() {
           viewport={{ once: true }}
           className="flex flex-col w-full xl:w-[75%] items-start"
         >
-          <p className="font-Montserrat text-[14px] font-medium uppercase tracking-widest text-brand">
+          <p className="font-Montserrat text-[13px] font-medium uppercase tracking-widest text-brand">
             Soluções
           </p>
-          <h2 className="font-Montserrat text-[40px] md:text-[48px] text-white font-medium">
+          <h2 className="font-Montserrat text-[36px] md:text-[42px] text-white font-medium">
             Nossas áreas de atuação.
           </h2>
-          <p className="font-poppins font-normal text-[16px] text-white/80 max-w-2xl">
+          <p className="font-poppins font-normal text-[15px] text-white/80 max-w-2xl">
             Proteção integral contra riscos legais e operacionais. Soluções
             jurídicas estruturadas para proteger a operação e alavancar
             resultados financeiros.
@@ -93,13 +93,13 @@ export default function FifthSection() {
               className="flex flex-col bg-white/5 backdrop-blur-md border border-white/20 w-full xl:w-1/3 shadow-2xl hover:shadow-brand/10 transition-shadow duration-500"
             >
               <div className="flex flex-col gap-3 p-8 grow">
-                <p className="font-Montserrat text-brand2 text-[12px] font-bold uppercase tracking-wider">
+                <p className="font-Montserrat text-brand2 text-[11px] font-bold uppercase tracking-wider">
                   {card.tag}
                 </p>
-                <h3 className="font-Montserrat text-[24px] font-semibold text-white leading-tight min-h-15">
+                <h3 className="font-Montserrat text-[22px] font-semibold text-white leading-tight min-h-15">
                   {card.title}
                 </h3>
-                <p className="font-poppins text-[15px] text-white font-normal leading-relaxed">
+                <p className="font-poppins text-[14px] text-white font-normal leading-relaxed">
                   {card.text}
                 </p>
                 <a

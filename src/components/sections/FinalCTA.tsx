@@ -25,7 +25,7 @@ const CLOUDINARY_FINAL = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_au
 
 export default function FinalCTA() {
   return (
-    <section className="relative w-full py-32 md:py-48 flex items-center justify-center overflow-hidden">
+    <section className="relative w-full py-48 md:py-64 flex items-center justify-center overflow-hidden">
       {/* ✅ loading="lazy" — seção está próxima ao fim da página */}
       <Image
         src={CLOUDINARY_FINAL}
@@ -45,7 +45,7 @@ export default function FinalCTA() {
       >
         <motion.h2
           variants={childVariants}
-          className="font-Montserrat text-white font-bold text-[32px] md:text-[56px] leading-tight mb-8"
+          className="font-Montserrat text-white font-bold text-[28px] md:text-[48px] leading-tight mb-6"
         >
           Para empresas que não aceitam <br />
           o risco como variável inevitável.
@@ -53,7 +53,7 @@ export default function FinalCTA() {
 
         <motion.p
           variants={childVariants}
-          className="font-poppins text-white/70 text-[16px] md:text-[18px] max-w-2xl mb-12 leading-relaxed"
+          className="font-poppins text-white/70 text-[15px] md:text-[16px] max-w-2xl mb-10 leading-relaxed"
         >
           A advocacia moderna não vive nos tribunais, mas na estratégia que evita
           que você chegue até eles. Proteja sua operação com quem domina a
@@ -66,7 +66,7 @@ export default function FinalCTA() {
             href="https://api.whatsapp.com/send/?phone=%2B5511996669191&text&type=phone_number&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative bg-brand px-10 py-5 text-gray-950 font-Montserrat font-bold text-[14px] md:text-[16px] uppercase tracking-widest transition-all duration-300 hover:bg-orange-200 hover:scale-105 inline-block"
+            className="relative bg-brand px-8 py-4 text-gray-950 font-Montserrat font-bold text-[13px] md:text-[15px] uppercase tracking-widest transition-all duration-300 hover:bg-orange-200 hover:scale-105 inline-block"
           >
             Agendar reunião estratégica
           </a>

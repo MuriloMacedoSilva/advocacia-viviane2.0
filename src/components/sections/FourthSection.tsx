@@ -8,7 +8,7 @@ const CLOUDINARY_FOURTH = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_a
 
 export default function FourthSection() {
   return (
-    <section className="relative flex flex-col md:px-[9%] overflow-hidden">
+    <section className="relative flex flex-col md:px-[9%] py-20 lg:py-32 overflow-hidden">
       {/* ✅ loading="lazy" e aria-hidden para imagem decorativa de fundo */}
       <Image
         src={CLOUDINARY_FOURTH}
@@ -19,13 +19,13 @@ export default function FourthSection() {
         aria-hidden="true"
       />
 
-      <div className="w-full relative z-10 h-160 lg:h-87.5 flex items-center justify-start py-20">
+      <div className="w-full relative z-10 h-200 lg:h-120 flex items-center justify-start py-20">
         <motion.h2
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="font-Montserrat text-white font-medium text-[27px] md:text-[36px] w-full lg:w-[70%] border-l-5 pl-8 border-brand leading-tight"
+          className="font-Montserrat text-white font-medium text-[24px] md:text-[32px] w-full lg:w-[70%] border-l-5 pl-8 border-brand leading-tight"
         >
           "Não remediamos processos; <br />
           <span className="text-brand">Prevenimos</span> a falência da confiança."
