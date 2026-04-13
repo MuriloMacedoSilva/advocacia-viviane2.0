@@ -5,6 +5,8 @@ import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 import { motion, Variants } from "framer-motion";
 
+import background from "../../../public/background1-1.webp"
+
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -19,40 +21,31 @@ const itemVariants: Variants = {
 };
 
 const CLOUDINARY_VIDEO_URL = "https://res.cloudinary.com/dhtjefgr3/video/upload/q_auto:best/v1775830202/7318604-hd_1366_658_30fps_jumbhw.mp4";
-const CLOUDINARY_POSTER = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_auto,f_auto/v1775830189/background1-1";
+const CLOUDINARY_POSTER = "https://res.cloudinary.com/dhtjefgr3/image/upload/q_auto/f_auto/v1776096864/background1-1_yhjob1.webp";
 
 const LOCAL_VIDEO_WEBM = "/backgroundBreake2.webm";
 const LOCAL_VIDEO_MP4 = "/backgroundBreake2mp.mp4";
 
 export default function FirstSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoFailed, setVideoFailed] = useState(true);
+  const [videoFailed, setVideoFailed] = useState(false);
 
   useEffect(() => {
-    const video = document.createElement('video');
-    const canPlayMp4 = video.canPlayType('video/mp4');
-    const canPlayWebm = video.canPlayType('video/webm');
-    const supportsVideo = canPlayMp4 === 'probably' || canPlayMp4 === 'maybe' || 
-                          canPlayWebm === 'probably' || canPlayWebm === 'maybe';
-    const prefersReducedData = window.matchMedia?.('(prefers-reduced-data: reduce)')?.matches || false;
-
-    if (supportsVideo && !prefersReducedData) {
-      setVideoFailed(false);
+    if (window.matchMedia?.('(prefers-reduced-data: reduce)')?.matches) {
+      setVideoFailed(true);
       return;
     }
 
-    const currentVideo = videoRef.current;
-    if (!currentVideo) return;
+    const video = videoRef.current;
+    if (!video) {
+      setVideoFailed(true);
+      return;
+    }
 
     const handleError = () => setVideoFailed(true);
-    const timeout = setTimeout(() => setVideoFailed(true), 5000);
 
-    currentVideo.addEventListener('error', handleError);
-
-    return () => {
-      currentVideo.removeEventListener('error', handleError);
-      clearTimeout(timeout);
-    };
+    video.addEventListener('error', handleError);
+    return () => video.removeEventListener('error', handleError);
   }, []);
 
   return (
